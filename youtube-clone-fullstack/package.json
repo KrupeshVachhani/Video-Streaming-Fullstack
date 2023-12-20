@@ -3,14 +3,20 @@
   "version": "1.0.0",
   "description": "a youtube clone",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-module src/index.js"
   },
   "author": "Krupesh Vachhani",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.0.2",
     "prettier": "^3.1.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3"
   }
 }
