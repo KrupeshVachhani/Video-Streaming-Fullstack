@@ -8,7 +8,14 @@ const app = express();
 
 
 dotenv.config();
-ConnectDB();
+ConnectDB().then(()=>{
+    app.listen(process.env.PORT || 8000 ,()=>{
+        console.log(`Listening on port ${process.env.PORT}`);
+    })
+}).catch((error)=>{
+    console.error("Error",error);
+    throw error
+})  
 
 
 // //effie ()() immdeately invoked function expression
