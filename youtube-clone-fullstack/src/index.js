@@ -10,17 +10,18 @@ import { app } from "./app.js";
 
 dotenv.config();
 ConnectDB()
-  .then(() => {
-    app.listen(process.env.PORT || 8000, () => {
-      console.log(`Listening on port ${process.env.PORT}`);
+    .then(() => {
+        app.listen(process.env.PORT || 8000, () => {
+            console.log(`Listening on port ${process.env.PORT}`);
+        });
+    })
+    .catch((error) => {
+        console.error("Error", error);
+        throw error;
     });
-  })
-  .catch((error) => {
-    console.error("Error", error);
-    throw error;
-  });
 
 // //effie ()() immdeately invoked function expression
+//
 // ;(async ()=>{
 //     try{
 //        await mongoose.connect(`${process.env.MONGODB_URI} / ${DB_NAME}`);
