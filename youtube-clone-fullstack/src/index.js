@@ -8,7 +8,9 @@ import { app } from "./app.js";
 
 // const app = express();
 
-dotenv.config();
+dotenv.config({
+    path: "./.env",
+});
 ConnectDB()
     .then(() => {
         app.listen(process.env.PORT || 8000, () => {
