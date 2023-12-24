@@ -1,0 +1,135 @@
+@import "colors";
+
+.about {
+  width: 60vw;
+  margin: auto;
+  padding: 1rem;
+
+  > main {
+    background-color: white;
+    // max-width: 900px;
+    height: 100%;
+    margin: auto;
+
+    > h1 {
+      font: 400 2rem "Roboto";
+      color: white;
+      padding: 1rem 2rem;
+      text-transform: uppercase;
+      border-radius: 5px;
+      background-color: $red;
+    }
+
+    > article {
+      margin: 2rem 0;
+      > h4 {
+        font: 100 2rem "Roboto";
+        text-transform: uppercase;
+        text-align: center;
+        padding: 2rem 0;
+      }
+
+      > p {
+        letter-spacing: 3px;
+        word-spacing: 3px;
+        padding: 2rem;
+        width: 50%;
+        text-align: center;
+        margin: auto;
+      }
+
+      > a {
+        background-color: $red;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        color: white;
+        font-size: 1.5rem;
+        transition: all 0.3s;
+        margin: auto;
+        &:hover {
+          color: $red;
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    > div {
+      background-color: $red;
+      padding: 1rem;
+      border-radius: 5px;
+      color: white;
+      > h2 {
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      > article {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+
+        > div {
+          width: 45%;
+          
+        }
+        > p {
+          margin: 0 1rem;
+          width: 50%;
+          letter-spacing: 2px;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about > main {
+    > h1 {
+      font: 100 1rem "Roboto";
+      text-align: center;
+      width: 60vw;
+      margin-left: -5%;
+    }
+
+    > article > p {
+      width: 40vw;
+      font-size: 1rem;
+      padding: 0%;
+    }
+
+    > div > article {
+      flex-direction: column;
+
+      > p {
+        text-align: center;
+      }
+    }
+    > article > h4 {
+      font: 100 1rem "Roboto";
+      padding: 0%;
+    }
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  .about > main > div > article > div {
+    width: 50vw;
+    margin: 0rem;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .about > main {
+    > article > p {
+      width: 40vw;
+      font-size: 1.5rem;
+      padding: 0%;
+    }
+  }
+}

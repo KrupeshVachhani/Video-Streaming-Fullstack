@@ -1,0 +1,73 @@
+@media only screen and (min-width: 992px) {
+  .nav {
+    width: 60vw;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-left: 50%;
+    padding-right: 1%;
+    font-size: 1.3rem;
+  }
+
+  .nav > li {
+    padding: 3%;
+  }
+}
+
+.navbar {
+  width: 100vw;
+  height: 12vh;
+  padding-bottom: 1%;
+}
+
+.links{
+  text-decoration: none;
+  /* padding: 5%; */
+  color: black;
+}
+
+.links:hover{
+    color:#e80059;
+}
+
+.logo{
+  width: 13vh;
+  margin-left:1%;
+  margin-top:-1em;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar {
+    width: 100vw;
+    // height: 12vh;
+    padding-bottom: 1%;
+  }
+  .logo{
+    width: 10vh;
+    margin-left:1%;
+    margin-top:-1em;
+  }
+
+  .clo-nav{
+    position: absolute;
+    width: 95vw;
+    border-radius: 10%;
+    height: 50vh;
+    background: #000000cc;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120%;
+  }
+  .nav-item{
+    margin-left: 11rem;
+    font-size: x-large;
+    padding: 0.3rem;
+  }
+  .links{
+
+    color: #e80059;
+  }
+
+}
