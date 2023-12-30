@@ -86,6 +86,7 @@ userSchema.methods.generateTokens = function () {
         { expiresIn: process.env.ACCESS_TOKEN_EXPIRY },
     );
 };
+
 userSchema.methods.generateRefreshToken = function () {
     //generate a token
     return jwt.sign(
